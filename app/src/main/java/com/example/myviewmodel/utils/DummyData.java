@@ -3,6 +3,8 @@ package com.example.myviewmodel.utils;
 import com.example.myviewmodel.model.MovieEntity;
 import com.example.myviewmodel.model.TvEntity;
 
+import java.util.ArrayList;
+
 public class DummyData {
     public static ArrayList<MovieEntity> generateDummyMovie(){
         ArrayList<MovieEntity> movie = new ArrayList<>();
@@ -48,7 +50,7 @@ public class DummyData {
                 ""));
         return movie;
     }
-    public static ArrayList<TvEntity> tv generateDummyTv(){
+    public static ArrayList<TvEntity>  generateDummyTv(){
         ArrayList<TvEntity> tv = new ArrayList<>();
         tv.add(new TvEntity("1",
                 "Lucifer",

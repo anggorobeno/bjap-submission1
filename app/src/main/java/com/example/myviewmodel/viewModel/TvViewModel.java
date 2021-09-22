@@ -1,10 +1,15 @@
 package com.example.myviewmodel.viewModel;
 
-import com.example.myviewmodel.model.TvEntity;
+import androidx.lifecycle.ViewModel;
 
-public class TvViewModel extends Viewmodel {
+import com.example.myviewmodel.model.TvEntity;
+import com.example.myviewmodel.utils.DummyData;
+
+import java.util.List;
+
+public class TvViewModel extends ViewModel {
     public List<TvEntity> getTv() {
-        return DataDummy.generateDummyTv();
+        return DummyData.generateDummyTv();
     }
 
 }

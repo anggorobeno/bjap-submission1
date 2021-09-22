@@ -1,10 +1,15 @@
 package com.example.myviewmodel.viewModel;
 
-import com.example.myviewmodel.model.MovieEntity;
+import androidx.lifecycle.ViewModel;
 
-public class MovieViewModel extends Viewmodel{
+import com.example.myviewmodel.model.MovieEntity;
+import com.example.myviewmodel.utils.DummyData;
+
+import java.util.List;
+
+public class MovieViewModel extends ViewModel {
     public List<MovieEntity> getMovie() {
-        return DataDummy.generateDummyMovie();
+        return DummyData.generateDummyMovie();
     }
 }
 

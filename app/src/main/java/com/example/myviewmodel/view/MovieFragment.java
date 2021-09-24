@@ -47,6 +47,7 @@ public class MovieFragment extends Fragment {
 
             recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false));
             recyclerView.setHasFixedSize(true);
+            recyclerView.smoothScrollToPosition(0);
             recyclerView.setAdapter(movieFragmentAdapter);
         }
     }

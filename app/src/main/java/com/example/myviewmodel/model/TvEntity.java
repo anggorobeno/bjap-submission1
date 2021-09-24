@@ -4,13 +4,19 @@ public class TvEntity {
     private String id;
     private String title;
     private String desc;
-    private int TvImage;
+    private int tvYear;
+    private int tvImage;
 
-    public TvEntity(String id, String title, String desc, int tvImage) {
+    public int getTvYear() {
+        return tvYear;
+    }
+
+    public TvEntity(String id, String title, String desc, int tvYear, int tvImage) {
         this.id = id;
         this.title = title;
         this.desc = desc;
-        TvImage = tvImage;
+        this.tvYear = tvYear;
+        this.tvImage = tvImage;
     }
 
     public String getId() {
@@ -26,6 +32,6 @@ public class TvEntity {
     }
 
     public int getTvImage() {
-        return TvImage;
+        return tvImage;
     }
 }

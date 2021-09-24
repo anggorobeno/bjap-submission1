@@ -8,11 +8,13 @@
         android:id="@+id/navigation_movies"
         android:name="com.example.myviewmodel.view.MovieFragment"
         android:label="@string/title_movie"
-        tools:layout="@layout/fragment_movie" />
+        tools:layout="@layout/fragment_movie" >
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_tvShow"
         android:name="com.example.myviewmodel.view.TvFragment"
         android:label="@string/title_tv"
-        tools:layout="@layout/fragment_tv" />
+        tools:layout="@layout/fragment_tv" >
+    </fragment>
 </navigation>

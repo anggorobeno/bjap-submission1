@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
             R.string.title_movie,
             R.string.title_tv
     };
-    private int[] tabIcons = {
+    private final int[] tabIcons = {
             R.drawable.movie_icon,
             R.drawable.tv_icon
     };

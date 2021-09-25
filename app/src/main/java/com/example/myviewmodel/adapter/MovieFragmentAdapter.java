@@ -1,21 +1,20 @@
 package com.example.myviewmodel.adapter;
 
 import android.app.Activity;
-import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
-import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myviewmodel.R;
 import com.example.myviewmodel.model.MovieEntity;
+import com.example.myviewmodel.utils.Constant;
+import com.example.myviewmodel.view.MovieDetailActivity;
 import com.google.android.material.card.MaterialCardView;
 import com.squareup.picasso.Picasso;
 
@@ -49,7 +48,10 @@ public class MovieFragmentAdapter extends RecyclerView.Adapter<MovieFragmentAdap
     public void onBindViewHolder(@NonNull MovieFragmentAdapter.ViewHolder holder, int position) {
         holder.bindData(listMovie.get(position));
         holder.cardView.setOnClickListener(v->{
-            Toast.makeText(activity.getApplicationContext(), "", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(activity, MovieDetailActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.putExtra(Constant.EXTRA_MOVIE,listMovie.get(position).getId());
+            activity.startActivity(intent);
         });
     }
 

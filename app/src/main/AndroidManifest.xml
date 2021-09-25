@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyViewModel">
         <activity
-            android:name=".view.DetailActivity"
+            android:name=".view.TvDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.MovieDetailActivity"
             android:exported="true" />
         <activity
             android:name=".view.MainActivity"

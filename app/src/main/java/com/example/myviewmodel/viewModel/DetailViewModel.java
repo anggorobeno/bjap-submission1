@@ -12,16 +12,8 @@ public class DetailViewModel extends ViewModel {
     private String movieId;
     private String tvId;
 
-    public String getMovieId() {
-        return movieId;
-    }
-
     public void setMovieId(String movieId) {
         this.movieId = movieId;
-    }
-
-    public String getTvId() {
-        return tvId;
     }
 
     public void setTvId(String tvId) {

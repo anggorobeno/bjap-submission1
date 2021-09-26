@@ -1,17 +1,14 @@
 package com.example.myviewmodel.view;
 
+import android.content.Context;
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
-import android.content.Context;
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import com.example.myviewmodel.R;
-import com.example.myviewmodel.model.MovieEntity;
 import com.example.myviewmodel.model.TvEntity;
 import com.example.myviewmodel.utils.Constant;
 import com.example.myviewmodel.viewModel.DetailViewModel;

@@ -1,11 +1,11 @@
 package com.example.myviewmodel.model;
 
 public class TvEntity {
-    private String id;
-    private String title;
-    private String desc;
-    private int tvYear;
-    private int tvImage;
+    private final String id;
+    private final String title;
+    private final String desc;
+    private final int tvYear;
+    private final int tvImage;
 
     public int getTvYear() {
         return tvYear;

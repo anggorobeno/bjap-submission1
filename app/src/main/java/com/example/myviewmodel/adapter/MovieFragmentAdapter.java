@@ -28,9 +28,6 @@ public class MovieFragmentAdapter extends RecyclerView.Adapter<MovieFragmentAdap
         this.activity = activity;
     }
 
-    public ArrayList<MovieEntity> getListMovie() {
-        return listMovie;
-    }
 
     public void setListMovie(ArrayList<MovieEntity> listMovie) {
         this.listMovie = listMovie;
@@ -60,7 +57,7 @@ public class MovieFragmentAdapter extends RecyclerView.Adapter<MovieFragmentAdap
         return listMovie.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvTitle;
         //TextView tvDesc;
         ImageView imgPoster;

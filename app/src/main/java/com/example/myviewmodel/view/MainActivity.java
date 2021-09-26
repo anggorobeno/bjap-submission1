@@ -1,16 +1,18 @@
 package com.example.myviewmodel.view;
 
+import android.os.Bundle;
+
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.viewpager2.widget.ViewPager2;
-
-import android.os.Bundle;
 
 import com.example.myviewmodel.R;
 import com.example.myviewmodel.adapter.SectionsPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
     private TabLayout tabs;
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this);
         ViewPager2 viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);
@@ -35,36 +38,17 @@ public class MainActivity extends AppCompatActivity {
                 (tab, position) -> tab.setText(getResources().getString(TAB_TITLES[position]))
         ).attach();
         setupIcons();
-        tabListener();
 
         if(getSupportActionBar() != null) {
             getSupportActionBar().setElevation(0);
         }
     }
 
-    private void tabListener() {
-        tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
 
-
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
-    }
 
     private void setupIcons(){
-        tabs.getTabAt(0).setIcon(tabIcons[0]);
-        tabs.getTabAt(1).setIcon(tabIcons[1]);
+        Objects.requireNonNull(tabs.getTabAt(0)).setIcon(tabIcons[0]);
+        Objects.requireNonNull(tabs.getTabAt(1)).setIcon(tabIcons[1]);
 
 
     }

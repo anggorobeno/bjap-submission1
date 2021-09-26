@@ -1,11 +1,10 @@
 <resources>
-    <string name="app_name">MyViewModel</string>
-    <string name="width">Lebar</string>
-    <string name="result">Hasil</string>
-    <string name="calculate">Hitung</string>
-    <string name="height">Tinggi</string>
-    <string name="length">Panjang</string>
+    <string name="app_name">Movies App</string>
     <string name="title_tv">TV Show</string>
     <string name="title_movie">Movies</string>
+    <string name="title">title</string>
+    <string name="desc">Desc</string>
+    <string name="poster_image">Poster Image</string>
+    <string name="year">Year</string>
 
 </resources>

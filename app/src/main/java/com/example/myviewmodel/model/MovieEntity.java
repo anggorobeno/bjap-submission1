@@ -1,11 +1,11 @@
 package com.example.myviewmodel.model;
 
 public class MovieEntity {
-    private String id;
-    private String title;
-    private String desc;
-    private int movieYear;
-    private int movieImage;
+    private final String id;
+    private final String title;
+    private final String desc;
+    private final int movieYear;
+    private final int movieImage;
 
     public MovieEntity(String id, String title, String desc, int movieYear, int movieImage) {
         this.id = id;

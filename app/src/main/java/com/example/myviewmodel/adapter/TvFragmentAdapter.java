@@ -27,9 +27,6 @@ public class TvFragmentAdapter extends RecyclerView.Adapter<TvFragmentAdapter.Vi
 
     Activity activity;
 
-    public ArrayList<TvEntity> getListTv() {
-        return listTv;
-    }
 
     public void setListTv(ArrayList<TvEntity> listTv) {
         this.listTv = listTv;
@@ -62,7 +59,7 @@ public class TvFragmentAdapter extends RecyclerView.Adapter<TvFragmentAdapter.Vi
         return listTv.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvTitle;
         MaterialCardView cardView;
         TextView tvYear;

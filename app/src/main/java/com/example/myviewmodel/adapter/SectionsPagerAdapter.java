@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.myviewmodel.R;
 import com.example.myviewmodel.view.MovieFragment;
 import com.example.myviewmodel.view.TvFragment;
 
@@ -26,6 +25,7 @@ public class SectionsPagerAdapter extends FragmentStateAdapter {
                 fragment = new TvFragment();
                 break;
         }
+        assert fragment != null;
         return fragment;
     }
 

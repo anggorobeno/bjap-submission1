@@ -11,21 +11,21 @@ import org.junit.Test;
 
 public class DetailViewModelTest {
     private DetailViewModel detailViewModel;
-    private MovieEntity dummyMovie = DummyData.generateDummyMovie().get(0);
-    private TvEntity dummyTv = DummyData.generateDummyTv().get(0);
-    private String movieId = dummyMovie.getId();
-    private String tvId = dummyTv.getId();
+    private final MovieEntity dummyMovie = DummyData.generateDummyMovie().get(0);
+    private final TvEntity dummyTv = DummyData.generateDummyTv().get(0);
+    private final String movieId = dummyMovie.getId();
+    private final String tvId = dummyTv.getId();
 
     @Before
     public void setUp(){
         detailViewModel = new DetailViewModel();
         detailViewModel.setMovieId(movieId);
-        detailViewModel.setTvId(movieId);
+        detailViewModel.setTvId(tvId);
     }
 
     @Test
     public void getMovie() {
-        detailViewModel.setMovieId(dummyMovie.getId());
+        detailViewModel.setMovieId(movieId);
         MovieEntity movieEntity = detailViewModel.getMovie();
         assertNotNull(movieEntity);
         assertEquals(dummyMovie.getId(),movieEntity.getId());
@@ -38,7 +38,7 @@ public class DetailViewModelTest {
 
     @Test
     public void getTv() {
-        detailViewModel.setTvId(dummyTv.getId());
+        detailViewModel.setTvId(tvId);
         TvEntity tvEntity = detailViewModel.getTv();
         assertNotNull(tvEntity);
         assertEquals(dummyTv.getId(),tvEntity.getId());

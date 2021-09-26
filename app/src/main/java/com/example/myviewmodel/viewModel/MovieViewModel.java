@@ -6,7 +6,6 @@ import com.example.myviewmodel.model.MovieEntity;
 import com.example.myviewmodel.utils.DummyData;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MovieViewModel extends ViewModel {
     public ArrayList<MovieEntity> getMovie() {

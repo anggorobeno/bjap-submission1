@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         tools:srcCompat="@tools:sample/avatars"
-        />
+        android:contentDescription="@string/poster_image" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvTitle"
             android:padding="2dp"
-            android:text="Title"
+            android:text="@string/title"
             android:textSize="14sp"
             android:textAppearance="?attr/textAppearanceHeadline6" />
 
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:padding="2dp"
             android:textSize="12sp"
-            android:text="Year"
+            android:text="@string/year"
             android:id="@+id/tvYear"
             android:textAppearance="?attr/textAppearanceBody2"
             />

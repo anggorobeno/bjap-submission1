@@ -6,7 +6,6 @@ import com.example.myviewmodel.model.TvEntity;
 import com.example.myviewmodel.utils.DummyData;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class TvViewModel extends ViewModel {
     public ArrayList<TvEntity> getTv() {

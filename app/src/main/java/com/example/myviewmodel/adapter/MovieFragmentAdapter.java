@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myviewmodel.R;
 import com.example.myviewmodel.model.MovieEntity;
 import com.example.myviewmodel.utils.Constant;
-import com.example.myviewmodel.view.MovieDetailActivity;
+import com.example.myviewmodel.view.activity.MovieDetailActivity;
 import com.google.android.material.card.MaterialCardView;
 import com.squareup.picasso.Picasso;
 

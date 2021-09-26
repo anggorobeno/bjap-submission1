@@ -1,4 +1,4 @@
-package com.example.myviewmodel.view;
+package com.example.myviewmodel.view.activity;
 
 import android.os.Bundle;
 
@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this);
         ViewPager2 viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);

@@ -1,4 +1,4 @@
-package com.example.myviewmodel.view;
+package com.example.myviewmodel.view.activity;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,12 +9,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.myviewmodel.R;
-import com.example.myviewmodel.model.TvEntity;
+import com.example.myviewmodel.model.MovieEntity;
 import com.example.myviewmodel.utils.Constant;
 import com.example.myviewmodel.viewModel.DetailViewModel;
 import com.squareup.picasso.Picasso;
 
-public class TvDetailActivity extends AppCompatActivity {
+public class MovieDetailActivity extends AppCompatActivity {
     TextView tvDesc;
     ImageView imgPoster;
     TextView tvTitle;
@@ -31,22 +31,22 @@ public class TvDetailActivity extends AppCompatActivity {
         DetailViewModel detailViewModel = new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(DetailViewModel.class);
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            String tvId = extras.getString(Constant.EXTRA_TV);
-            if (tvId != null) {
-                detailViewModel.setTvId(tvId);
+            String movieId = extras.getString(Constant.EXTRA_MOVIE);
+            if (movieId != null) {
+                detailViewModel.setMovieId(movieId);
             }
-            if (detailViewModel.getTv() != null){
-                populateView(detailViewModel.getTv());
+            if (detailViewModel.getMovie() != null){
+                populateView(detailViewModel.getMovie());
             }
         }
 
-    }
+}
 
-    private void populateView(TvEntity tv) {
-        tvDesc.setText(tv.getDesc());
-        tvTitle.setText(tv.getTitle());
+    private void populateView(MovieEntity movie) {
+        tvDesc.setText(movie.getDesc());
+        tvTitle.setText(movie.getTitle());
         Picasso.with(context)
-                .load(tv.getTvImage())
+                .load(movie.getMovieImage())
                 .fit()
                 .into(imgPoster);
     }

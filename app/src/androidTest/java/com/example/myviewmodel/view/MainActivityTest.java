@@ -14,6 +14,7 @@ import com.example.myviewmodel.R;
 import com.example.myviewmodel.model.MovieEntity;
 import com.example.myviewmodel.model.TvEntity;
 import com.example.myviewmodel.utils.DummyData;
+import com.example.myviewmodel.view.activity.MainActivity;
 
 import org.junit.Rule;
 import org.junit.Test;

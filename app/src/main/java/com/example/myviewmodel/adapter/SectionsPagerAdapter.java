@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.myviewmodel.view.MovieFragment;
-import com.example.myviewmodel.view.TvFragment;
+import com.example.myviewmodel.view.fragment.MovieFragment;
+import com.example.myviewmodel.view.fragment.TvFragment;
 
 public class SectionsPagerAdapter extends FragmentStateAdapter {
     public SectionsPagerAdapter(AppCompatActivity activity) {

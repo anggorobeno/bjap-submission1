@@ -1,4 +1,4 @@
-package com.example.myviewmodel.view;
+package com.example.myviewmodel.view.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

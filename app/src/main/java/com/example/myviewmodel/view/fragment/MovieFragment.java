@@ -33,9 +33,12 @@ public class MovieFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_movie, container, false);
     }
 
+
+
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        recyclerView = view.findViewById(R.id.rvMovie);
         if (getActivity()!= null){
             MovieViewModel movieViewModel = new ViewModelProvider(this,new ViewModelProvider.NewInstanceFactory()).get(MovieViewModel.class);
             ArrayList<MovieEntity> movie = movieViewModel.getMovie();
@@ -48,12 +51,6 @@ public class MovieFragment extends Fragment {
             recyclerView.smoothScrollToPosition(0);
             recyclerView.setAdapter(movieFragmentAdapter);
         }
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        recyclerView = view.findViewById(R.id.rvMovie);
     }
 
 }

@@ -59,14 +59,12 @@ public class MovieFragmentAdapter extends RecyclerView.Adapter<MovieFragmentAdap
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvTitle;
-        //TextView tvDesc;
         ImageView imgPoster;
         TextView tvYear;
         MaterialCardView cardView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvTitle = itemView.findViewById(R.id.tvTitle);
-            //tvDesc = itemView.findViewById(R.id.tvDesc);
             imgPoster = itemView.findViewById(R.id.imgPoster);
             cardView = itemView.findViewById(R.id.carView);
             tvYear = itemView.findViewById(R.id.tvYear);
@@ -74,7 +72,6 @@ public class MovieFragmentAdapter extends RecyclerView.Adapter<MovieFragmentAdap
 
         public void bindData(MovieEntity movieEntity) {
             tvTitle.setText(movieEntity.getTitle());
-          //  tvDesc.setText(movieEntity.getDesc());
             tvYear.setText(String.valueOf(movieEntity.getMovieYear()));
             Picasso.with(itemView.getContext())
                     .load(movieEntity.getMovieImage())

@@ -32,9 +32,12 @@ public class TvFragment extends Fragment {
 
         return inflater.inflate(R.layout.fragment_tv, container, false);
     }
+
+
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        recyclerView = view.findViewById(R.id.rvTv);
         if (getActivity()!= null){
             TvViewModel tvViewModel = new ViewModelProvider(this,new ViewModelProvider.NewInstanceFactory()).get(TvViewModel.class);
             ArrayList<TvEntity> tv = tvViewModel.getTv();
@@ -46,12 +49,6 @@ public class TvFragment extends Fragment {
             recyclerView.setHasFixedSize(true);
             recyclerView.setAdapter(tvFragmentAdapter);
         }
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        recyclerView = view.findViewById(R.id.rvTv);
     }
 
 }

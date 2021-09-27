@@ -25,7 +25,6 @@ public class SectionsPagerAdapter extends FragmentStateAdapter {
                 fragment = new TvFragment();
                 break;
         }
-        assert fragment != null;
         return fragment;
     }
 
